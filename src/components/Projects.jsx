@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const projects = [
   {
@@ -22,36 +22,55 @@ const projects = [
 ];
 
 export default function Projects() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleProject = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
-    <section
-      id="projects"
-      className="min-h-screen py-16 px-6 transition-colors duration-500"
-    >
-      <h2 className="text-4xl font-bold text-center mb-12 text-purple-900 dark:text-purple-400 transition-colors duration-500">
+    <section id="projects" className="min-h-screen py-16 px-6">
+      <h2 className="text-4xl font-bold text-center mb-12 text-pink-200">
         Projects
       </h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div className="space-y-6 max-w-3xl mx-auto">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-red-300 dark:bg-red-700 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300"
+            className="bg-gradient-to-r from-purple-200/20 to-indigo-200/20
+                       backdrop-blur-md border border-purple-400/20
+                       rounded-2xl shadow-lg hover:shadow-pink-300/40
+                       transition duration-300 p-4"
           >
-            <h3 className="text-2xl font-semibold mb-4 text-purple-900 dark:text-purple-200 transition-colors duration-500">
+            {/* Title Button */}
+            <button
+              onClick={() => toggleProject(index)}
+              className="w-full text-left flex justify-between items-center
+                         text-xl font-semibold text-purple-100 hover:text-pink-200"
+            >
               {project.title}
-            </h3>
-            <p className="text-purple-700 dark:text-purple-200 mb-6 transition-colors duration-500">
-              {project.description}
-            </p>
-            <div className="mt-4">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-red-600 dark:bg-red-400 text-white dark:text-black rounded-lg hover:bg-red-700 dark:hover:bg-red-600 transition"
-              >
-                GitHub
-              </a>
-            </div>
+              <span className="text-pink-300">
+                {openIndex === index ? "▲" : "▼"}
+              </span>
+            </button>
+
+            {/* Expanded Content */}
+            {openIndex === index && (
+              <div className="mt-4 text-indigo-200 transition-all duration-500">
+                <p className="mb-4">{project.description}</p>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-gradient-to-r from-pink-300 to-purple-400
+                             hover:from-pink-400 hover:to-purple-500 text-white 
+                             rounded-lg shadow-md hover:shadow-pink-400/50 transition"
+                >
+                  GitHub 🔗
+                </a>
+              </div>
+            )}
           </div>
         ))}
       </div>

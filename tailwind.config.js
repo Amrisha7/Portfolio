@@ -1,9 +1,16 @@
-// tailwind.config.js
 module.exports = {
-  darkMode: 'class', // enables toggling dark mode via 'dark' class
-  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        bounceSlow: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+      },
+      animation: {
+        "bounce-slow": "bounceSlow 3s ease-in-out infinite",
+      },
+    },
   },
   plugins: [],
-}
+};

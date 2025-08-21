@@ -5,44 +5,54 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen flex flex-col items-center justify-center px-6 py-12 transition-colors duration-500"
+      className="min-h-screen flex flex-col items-center justify-center px-6 py-12"
     >
-      <h2 className="text-4xl font-bold mb-4 text-purple-900 dark:text-purple-400 transition-colors duration-500">
-        Get in Touch
-      </h2>
-      <p className="text-center max-w-xl mb-12 text-purple-800 dark:text-purple-200 transition-colors duration-500">
+      <h2 className="text-4xl font-bold mb-4 text-pink-200">Get in Touch</h2>
+      <p className="text-center max-w-xl mb-12 text-indigo-200">
         I’d love to connect with you! Whether it’s about a project, collaboration, or just to say hello — feel free to reach out.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <div className="flex items-center gap-3 p-5 bg-purple-300 dark:bg-purple-700 rounded-xl shadow-md hover:scale-105 transition duration-300">
-          <Mail className="w-6 h-6 text-red-700 dark:text-red-400" />
-          <span>amrishamishra070@gmail.com</span>
+        <div className="flex items-center gap-3 p-5 
+                        bg-gradient-to-r from-purple-200/20 to-pink-200/20 
+                        backdrop-blur-md border border-purple-300/20
+                        rounded-xl shadow-md hover:shadow-pink-300/40 hover:scale-105 transition">
+          <Mail className="w-6 h-6 text-pink-300" />
+          <span className="text-purple-100">amrishamishra070@gmail.com</span>
         </div>
 
-        <div className="flex items-center gap-3 p-5 bg-purple-300 dark:bg-purple-700 rounded-xl shadow-md hover:scale-105 transition duration-300">
-          <Phone className="w-6 h-6 text-green-500 dark:text-green-300" />
-          <span>+91-9051609132</span>
+        <div className="flex items-center gap-3 p-5 
+                        bg-gradient-to-r from-purple-200/20 to-pink-200/20 
+                        backdrop-blur-md border border-purple-300/20
+                        rounded-xl shadow-md hover:shadow-pink-300/40 hover:scale-105 transition">
+          <Phone className="w-6 h-6 text-green-300" />
+          <span className="text-purple-100">+91-9051609132</span>
         </div>
 
         <a
           href="https://github.com/Amrisha7"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-3 p-5 bg-purple-300 dark:bg-purple-700 rounded-xl shadow-md hover:scale-105 transition duration-300"
+          className="flex items-center gap-3 p-5 
+                     bg-gradient-to-r from-purple-200/20 to-pink-200/20 
+                     backdrop-blur-md border border-purple-300/20
+                     rounded-xl shadow-md hover:shadow-pink-300/40 hover:scale-105 transition"
         >
-          <Github className="w-6 h-6 text-gray-700 dark:text-gray-300" />
-          <span>GitHub</span>
+          <Github className="w-6 h-6 text-gray-300" />
+          <span className="text-purple-100">GitHub</span>
         </a>
 
         <a
           href="https://www.linkedin.com/in/amrisha-mishra-232298272"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-3 p-5 bg-purple-300 dark:bg-purple-700 rounded-xl shadow-md hover:scale-105 transition duration-300"
+          className="flex items-center gap-3 p-5 
+                     bg-gradient-to-r from-purple-200/20 to-pink-200/20 
+                     backdrop-blur-md border border-purple-300/20
+                     rounded-xl shadow-md hover:shadow-pink-300/40 hover:scale-105 transition"
         >
-          <Linkedin className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-          <span>LinkedIn</span>
+          <Linkedin className="w-6 h-6 text-blue-300" />
+          <span className="text-purple-100">LinkedIn</span>
         </a>
       </div>
     </section>

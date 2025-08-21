@@ -10,9 +10,10 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://Amrisha7.github.io/Portfolio/",   
+  "homepage": "https://Amrisha7.github.io/Portfolio/",
   "dependencies": {
-    "lucide-react": "^0.539.0",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.540.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
