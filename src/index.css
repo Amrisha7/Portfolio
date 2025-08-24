@@ -63,4 +63,5 @@ body, h1, h2, h3, h4, h5, h6, p, a, div, section, button {
   .animate-gradientMove {
     animation: gradientMove 8s ease infinite; /* faster shift */
   }
+
   

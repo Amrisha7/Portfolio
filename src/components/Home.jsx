@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import studentIllustration from "../assets/student-illustration.png";
+import introVideo from "../assets/intro.mp4";
 
 const Home = () => {
   const words = ["Web Developer", "AI Enthusiast", "Cyber Security Learner"];
@@ -34,23 +34,23 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left px-6 gap-12
-                bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400
-                dark:from-purple-900 dark:via-blue-800 dark:to-black
-                bg-[length:400%_400%] animate-gradientMove transition-colors duration-500"
+      className="min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left px-6 gap-12 pt-20
+                 bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400
+                 dark:from-purple-900 dark:via-blue-800 dark:to-black
+                 bg-[length:400%_400%] animate-gradientMove transition-colors duration-500"
     >
       {/* Text Content */}
       <div className="flex-1">
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-4 text-purple-900 dark:text-purple-400 transition-colors duration-500">
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-4 text-purple-900 dark:text-purple-400 transition-colors duration-500">
           Hi, I'm Amrisha Mishra
         </h1>
 
-        <p className="text-lg md:text-xl text-purple-700 dark:text-purple-200 mb-4 max-w-2xl h-8 transition-colors duration-500">
+        <p className="text-md md:text-xl text-purple-700 dark:text-purple-200 mb-4 max-w-2xl h-8 transition-colors duration-500">
           {displayedText}
           <span className="text-purple-900 dark:text-purple-400 font-bold">|</span>
         </p>
 
-        <p className="text-lg md:text-xl text-purple-700 dark:text-purple-200 mb-8 max-w-2xl transition-colors duration-500">
+        <p className="text-md md:text-xl text-purple-700 dark:text-purple-200 mb-8 max-w-2xl transition-colors duration-500">
           Passionate about creating projects in Web Development, Cyber Security, and AI.
         </p>
 
@@ -72,12 +72,15 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Illustration */}
+      {/* Intro Video */}
       <div className="flex-1 flex justify-center md:justify-end">
-        <img
-          src={studentIllustration}
-          alt="Student Illustration"
-          className="w-64 md:w-80 animate-[bounce_3s_ease-in-out_infinite]"
+        <video
+          src={introVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full max-w-md md:max-w-4xl h-auto rounded-2xl shadow-lg"
         />
       </div>
     </section>
